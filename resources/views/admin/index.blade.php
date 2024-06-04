@@ -108,17 +108,11 @@
             </a>
           </li>
           {{-- <li class="nav-header">Tambah Data</li> --}}
-              <li class="nav-item">
-                <a href="/datajemaat" class="nav-link">
-                   <i class="nav-icon fas fa-table"></i>
-                  <p>Data Jemaat </p>
-                </a>
-              </li>
 
               <li class="nav-item">
                 <a href="/lingkungans/index" class="nav-link">
                    <i class="nav-icon fas fa-table"></i>
-                  <p>Data Jemaat revisi</p>
+                  <p>Data Jemaat</p>
                 </a>
               </li>
           {{-- <li class="nav-header">Tambah Data</li>  --}}

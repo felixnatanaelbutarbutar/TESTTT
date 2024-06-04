@@ -138,5 +138,11 @@ use App\Http\Controllers\AnggotaKeluargaController;
 Route::get('/anggotakeluarga/{id}/anggota_keluargas', 'AnggotaKeluargaController@index')->name('anggota_keluargas.index');
 // Route::get('/lingkungans/{lingkunganId}/kepala_keluargas/{kepalaKeluargaId}/anggota_keluargas', [AnggotaKeluargaController::class, 'index'])->name('anggota_keluargas.index');
 Route::resource('anggota_keluargas', AnggotaKeluargaController::class);
-Route::get('/lingkungans/{lingkunganId}/kepala_keluargas/{kepalaKeluargaId}/anggota_keluargas', [AnggotaKeluargaController::class, 'showAnggotaKeluarga'])->name('anggota_keluargas.index');
 Route::get('/lingkungans/{lingkunganId}/kepala_keluargas/{kepalaKeluargaId}/anggota_keluargas', [AnggotaKeluargaController::class, 'index'])->name('anggota_keluargas.index');
+// Route untuk melihat anggota keluarga berdasarkan lingkungan dan kepala keluarga
+Route::get('/lingkungans/{lingkunganId}/kepala_keluargas/{kepalaKeluargaId}/anggota_keluargas', [AnggotaKeluargaController::class, 'showAnggotaKeluarga'])->name('anggota_keluargas.index');
+Route::get('/lingkungans/{lingkunganId}/kepala_keluargas/{kepalaKeluargaId}/anggota_keluargas/create', [AnggotaKeluargaController::class, 'create'])->name('anggota_keluargas.create');
+Route::post('/lingkungans/{lingkunganId}/kepala_keluargas/{kepalaKeluargaId}/anggota_keluargas/store', [AnggotaKeluargaController::class, 'store'])->name('anggota_keluargas.store');
+Route::get('/lingkungans/{lingkunganId}/kepala_keluargas/{kepalaKeluargaId}/anggota_keluargas/{anggotaKeluargaId}/edit', [AnggotaKeluargaController::class, 'edit'])->name('anggota_keluargas.edit');
+Route::put('/lingkungans/{lingkunganId}/kepala_keluargas/{kepalaKeluargaId}/anggota_keluargas/{anggotaKeluargaId}', [AnggotaKeluargaController::class, 'update'])->name('anggota_keluargas.update');
+Route::delete('/lingkungans/{lingkunganId}/kepala_keluargas/{kepalaKeluargaId}/anggota_keluargas/{anggotaKeluargaId}', [AnggotaKeluargaController::class, 'destroy'])->name('anggota_keluargas.destroy');
